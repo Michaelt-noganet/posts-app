@@ -21,7 +21,7 @@ services:
       POSTGRES_PASSWORD: wordline
       POSTGRES_DB: wordline
     volumes:
-      - .posts-backend/data:/var/lib/postgresql/data
+      - ./posts-backend/data:/var/lib/postgresql/data
     networks:
       - backend
   posts-app:
@@ -32,7 +32,9 @@ services:
     ports: 
       - 3000:3000
     environment: 
-      - ./.env
+      - .env
+    networks:
+      - backend
 networks:
   backend:
     external: true
