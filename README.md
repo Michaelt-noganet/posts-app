@@ -1,5 +1,5 @@
 ## Run the app with docker
-docker compose up
+yarn start
 
 Front-end is running on port http://localhost:3000
 

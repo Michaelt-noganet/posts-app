@@ -1,0 +1,15 @@
+{
+    "private": false,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "bash ./bin/start.sh"
+    },
+    "name": "posts-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:Michaelt-noganet/posts-app.git",
+    "author": "michaelt-paragone.ai <michaelt@paragone.ai>",
+    "license": "MIT"
+}

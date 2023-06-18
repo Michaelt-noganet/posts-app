@@ -1,6 +1,6 @@
 .vscode
 node_modules
 
-posts-backend/data
-posts-backend/venv
-posts-backend/.idea
+api-posts/data
+api-posts/venv
+api-posts/.idea
