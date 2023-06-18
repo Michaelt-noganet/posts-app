@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 6rem;
+    font-family: var(--font-mono);
+    color: var(--font-color);
+  }
+
+.welcomeElt {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+  

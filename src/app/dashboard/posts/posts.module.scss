@@ -1,0 +1,18 @@
+.listGroup {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+}
+
+.listItem {
+  position: relative;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,.125);
+  font-family: var(--font-mono);
+  color: var(--font-color);
+  font-weight: 700;
+}
+  

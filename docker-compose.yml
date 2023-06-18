@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  fastapi-app:
+    build:
+      context: .
+      dockerfile: ./posts-backend/Dockerfile
+    container_name: fastapi-app
+    ports:
+      - "3100:3100"
+    networks:
+      - backend
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - "0.0.0.0:5432:5432"
+    environment:
+      POSTGRES_USER: wordline
+      POSTGRES_PASSWORD: wordline
+      POSTGRES_DB: wordline
+    volumes:
+      - .posts-backend/data:/var/lib/postgresql/data
+    networks:
+      - backend
+  posts-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: posts-app
+    ports: 
+      - 3000:3000
+    environment: 
+      - ./.env
+networks:
+  backend:
+    external: true
+    name: backend

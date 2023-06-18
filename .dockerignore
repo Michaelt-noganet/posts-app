@@ -1,0 +1,7 @@
+.next
+.vscode
+node_modules
+
+posts-backend/data
+posts-backend/venv
+posts-backend/.idea

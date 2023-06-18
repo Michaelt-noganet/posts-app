@@ -1,0 +1,43 @@
+.main {
+    margin-left: 10px;
+    display: flex;
+    font-family: var(--font-mono);
+    margin-top: 15px;
+}
+
+.navBar {
+    width: 100%;
+    margin: auto;
+    font-weight: 700;
+    display: flex;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.navLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .navLink {
+         margin-right: 10px;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .navLink {
+        margin-right: 15px;
+    }
+}
+
+/* Large screen */
+@media (min-width: 1121px) {
+    .navLink {
+        margin-right: 20px;
+      }    
+}
