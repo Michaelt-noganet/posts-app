@@ -4,19 +4,39 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+posts = [
+    {"id": 1, "title": "Post 1", "content": "<h1>This is the first post.</h1>"},
+    {"id": 2, "title": "Post 2", "content": "<h1>This is the second post.</h1>"},
+    {"id": 3, "title": "Post 3", "content": "<h1>This is the third post.</h1>"},
+    {"id": 4, "title": "Post 4", "content": "<h1>This is the fourth post.</h1>"},
+]
+
 @app.get("/posts")
 def get_posts():
-    result = postgres.postgres_read()
-    return result
+    try:
+        result = postgres.postgres_read()
+        return result
+    except:
+        return posts
 
 
 @app.get("/post/")
 def get_post(id: int):
-    result = postgres.postgres_read(id)
-    return {
-        "res": "OK",
-        "data": [result]
-    }
+    try:
+        result = postgres.postgres_read(id)
+        return {
+            "res": "OK",
+            "data": [result]
+        }
+    except:
+        if id == 0:
+            return posts
+        for post in posts:
+            if post["id"] == id:
+                return {
+                    "res": "OK",
+                    "data": [post]
+                }
 
 
 @app.get("/index")

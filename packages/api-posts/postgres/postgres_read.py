@@ -42,7 +42,6 @@ def postgres_read(id: int = 0):
         cursor.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
-
     finally:
         conn.close()
         print('Database connection closed.')
