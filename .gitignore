@@ -39,6 +39,9 @@ next-env.d.ts
 
 #Python
 data
-posts-backend/data
-posts-backend/venv
-posts-backend/.idea
+packages/api-posts/data
+packages/api-posts/venv
+packages/api-posts/.idea
+
+packages/front-main/node_modules
+packages/front-main/.next

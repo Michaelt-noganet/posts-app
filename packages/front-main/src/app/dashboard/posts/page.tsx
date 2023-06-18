@@ -1,9 +1,9 @@
 import styles from './posts.module.scss'
-import { get } from '@security/api/get'
-import routes from '@security/routes'
-import Header from '@components/header/Header'
+import { get } from '../../../security/api/get'
+import routes from '../../../security/routes'
+import Header from '../../../components/header/Header'
 import Link from 'next/link'
-import { Post } from '@models/index'
+import { Post } from '../../models/index'
 
 
 export default async function Home(posts: Post[]) {
@@ -17,7 +17,7 @@ export default async function Home(posts: Post[]) {
     <main>
     <Header message={`${posts.length} Posts are waiting for you !`} />
       <ul className={styles.listGroup}>
-        {posts.map((post) => (
+        {posts !== undefined && posts.map((post) => (
           <li 
             className={styles.listItem}
             key={post.id}>
@@ -28,7 +28,7 @@ export default async function Home(posts: Post[]) {
                 }
                 }}>{ post.title }</Link>
           </li>
-        ))}
+        )) || <div>An error occured</div>}
       </ul>
     </main>
   )

@@ -1,7 +1,7 @@
 // import styles from './posts.module.scss'
-import { get } from '@security/api/get'
-import routes from '@security/routes'
-import { ApiResponse } from '@models/index'
+import { get } from '../../security/api/get'
+import routes from '../../security/routes'
+import { ApiResponse } from '../../app/models/index'
 
 
 export default async function InnerPost(props: {id: string | number}) {

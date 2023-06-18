@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from './home.module.scss'
-import { get } from '@security/api/get'
-import routes from '@security/routes'
-import Header from '@components/header/Header'
+import { get } from '../../../security/api/get'
+import routes from '../../../security/routes'
+import Header from '../../../components/header/Header'
 
 
 interface HpData {

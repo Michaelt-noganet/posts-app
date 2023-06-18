@@ -1,9 +1,9 @@
 "use client"
 
-import Header from '@components/header/Header'
+import Header from '../../../components/header/Header'
 import dynamic from 'next/dynamic'
 import { useSearchParams } from 'next/navigation'
-const InnerPost = dynamic(() => import('@components/inner-post/inner-post'))
+const InnerPost = dynamic(() => import('../../../components/inner-post/inner-post'))
 
 
 export default async function Home() {

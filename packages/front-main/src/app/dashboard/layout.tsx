@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { Suspense } from 'react'
 import NavBar from '../../components/navBar/NavBar'
-import Footer from '@/components/footer/Footer'
+import Footer from '../../components/footer/Footer'
 
 
 export default function RootLayout({

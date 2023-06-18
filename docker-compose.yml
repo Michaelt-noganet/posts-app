@@ -3,7 +3,7 @@ services:
   fastapi-app:
     build:
       context: .
-      dockerfile: ./posts-backend/Dockerfile
+      dockerfile: ./packages/api-posts/Dockerfile
     container_name: fastapi-app
     ports:
       - "3100:3100"
@@ -21,18 +21,7 @@ services:
       POSTGRES_PASSWORD: wordline
       POSTGRES_DB: wordline
     volumes:
-      - ./posts-backend/data:/var/lib/postgresql/data
-    networks:
-      - backend
-  posts-app:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    container_name: posts-app
-    ports: 
-      - 3000:3000
-    environment: 
-      - .env
+      - ./api-posts/data:/var/lib/postgresql/data
     networks:
       - backend
 networks:
